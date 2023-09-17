@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,700&family=Overpass:wght@700&display=swap");
+
+body {
+  background-color: #1e1e2e;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #2d293b;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: ;
+}
+
+.name {
+  font-family: "Overpass", sans-serif;
+  color: white;
+  text-decoration: none;
+  padding-left: 30px;
+  font-size: 32px;
+}
+
+.links {
+  display: inline-block;
+  font-family: "Overpass", sans-serif;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 28px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.links {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.links::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ee99a0;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+  transform: scaleX(0);
+}
+.links:hover::after {
+  transform: scaleX(1);
+}
+
+.roller {
+  height: 4.125rem;
+  line-height: 4rem;
+  position: relative;
+  overflow: hidden;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Overpass";
+  color: white;
+  font-size: 20px;
+}
+
+.roller #rolltext {
+  position: absolute;
+  top: 0;
+  animation: slide 5s infinite;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 100vh;
+}
+
+.left-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.right-main {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 190px;
+}
+
+.right-text {
+  padding-left: 150px;
+  font-family: "Cormorant Garamond";
+  text-align: right;
+}
+
+.left-text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  text-align: center;
+}
+
+.left-main-text {
+  font-family: "Overpass";
+  font-size: 20px;
+}
+
+.left-text1 {
+  font-family: "Overpass";
+  font-size: 20px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+.left-text2 {
+  font-family: "Overpass";
+  font-size: 20px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+.left-text3 {
+  font-family: "Overpass";
+  font-size: 20px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid pink; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end;
+}
+
+.pic {
+  opacity: 0.5;
+  transition: ease-in 0.2s;
+}
+
+.pic:hover {
+  opacity: 1;
+  transition: ease-in 0.2s;
+}
+
+@keyframes slide {
+  0% {
+    top: 0;
+    color: #c6aae8;
+  }
+  25% {
+    top: -4rem;
+    color: #b3e1a3;
+  }
+  50% {
+    top: -8rem;
+    color: #f0afe1;
+  }
+  72.5% {
+    top: -12.25rem;
+    color: #c6aae8;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #f1faee;
+    font-size: 2.125rem;
+  }
+
+  .roller {
+    height: 2.6rem;
+    line-height: 2.125rem;
+  }
+
+  #spare-time {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .roller #rolltext {
+    animation: slide-mob 5s infinite;
+  }
+
+  @keyframes slide-mob {
+    0% {
+      top: 0;
+      color: #c6aae8;
+    }
+    25% {
+      top: -2.125rem;
+      color: #b3e1a3;
+    }
+    50% {
+      top: -4.25rem;
+      color: #f0afe1;
+    }
+    72.5% {
+      top: -6.375rem;
+      color: #c6aae8;
+    }
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-right: none;
+    border-color: transparent;
+  }
+  50% {
+    border-color: pink;
+  }
+}
